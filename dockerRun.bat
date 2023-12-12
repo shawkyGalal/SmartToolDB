@@ -2,14 +2,16 @@
 
 set imageName=SmartTool-db
 set dbPassword=Redsea11
-set contScriptPath=/opt/oracle/SmartValue/SmartTool/Database
+set contScriptPath=/opt/oracle/SmartToolDB/
 set dbName=SVDB
 set port=1521
 set oracle_volume_name=oracle-volume
 set dumpFileName=SmartTool20170610.dmp
 
 REM Start the container in the background
-docker run -d -p %port%:%port% -e ORACLE_PASSWORD=%dbPassword% --name %imageName% --env=ORACLE_DATABASE=%dbName% -v %oracle_volume_name%:/opt/oracle/oradata gvenzl/oracle-free 
+# docker run -d -p %port%:%port% -e ORACLE_PASSWORD=%dbPassword% --name %imageName% --env=ORACLE_DATABASE=%dbName% -v %oracle_volume_name%:/opt/oracle/oradata gvenzl/oracle-free 
+  docker run -d -p %port%:%port% -e ORACLE_PASSWORD=%dbPassword% --name %imageName% --env=ORACLE_DATABASE=%dbName% -v %oracle_volume_name%:/opt/oracle/oradata shawkyfoda/smarttooldb-image 
+
 
 REM Wait for the container to be ready (you may need to adjust the sleep duration)
 :wait_loop
@@ -21,9 +23,9 @@ goto :wait_loop
 :container_ready
 echo Container is ready to accept commands.
 
-docker exec -it %imageName% mkdir -p %contScriptPath% 
-docker cp DB_Dump %imageName%:%contScriptPath%
-docker cp setup-scripts %imageName%:%contScriptPath%
+# docker exec -it %imageName% mkdir -p %contScriptPath% 
+# docker cp DB_Dump %imageName%:%contScriptPath%
+# docker cp setup-scripts %imageName%:%contScriptPath%
 
 #--- Create DB TableSpaces & Users 
 docker exec -it %imageName% sqlplus system/%dbPassword%@//localhost:%port%/%dbName% @%contScriptPath%/setup-scripts/createAllUsers.sql %dbName% 
