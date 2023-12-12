@@ -1,0 +1,33 @@
+-- Create the role 
+create role PNU_SUBJECT_OWNER;
+-- Grant/Revoke object privileges 
+grant select on CARRENT.BRANCH to PNU_SUBJECT_OWNER;
+grant select, insert, update, delete on ICDB.CORESPOND_DETAILS to PNU_SUBJECT_OWNER;
+grant select, insert, update, delete on ICDB.CORRESPONDENCE to PNU_SUBJECT_OWNER;
+grant select on ICDB.MAS_COMPANY_DATA to PNU_SUBJECT_OWNER;
+grant execute on ICDB.SECURITY to PNU_SUBJECT_OWNER;
+grant select, insert on ICDB.SEC_USR_DTA to PNU_SUBJECT_OWNER;
+grant select, insert, update, delete on PNU.ACADEMIC_TEM to PNU_SUBJECT_OWNER;
+grant select, insert, update, delete on PNU.ATTENDANCE to PNU_SUBJECT_OWNER;
+grant execute on PNU.ATTENDANCE_SERVICES to PNU_SUBJECT_OWNER;
+grant select, insert, update on PNU.COLLAGES to PNU_SUBJECT_OWNER;
+grant select, insert, update, delete on PNU.COLLAGE_SECTIONS to PNU_SUBJECT_OWNER;
+grant select, insert, update, delete on PNU.GRADES to PNU_SUBJECT_OWNER;
+grant execute on PNU.SCORE_SERVICES to PNU_SUBJECT_OWNER;
+grant select, insert, update, delete on PNU.SECTION_PROGRAMS to PNU_SUBJECT_OWNER;
+grant execute on PNU.SECURITY to PNU_SUBJECT_OWNER;
+grant select, insert, update, delete on PNU.STUDENT to PNU_SUBJECT_OWNER;
+grant select, insert, update, delete on PNU.SUBJECT to PNU_SUBJECT_OWNER;
+grant select, insert, update, delete on PNU.SUBJECT_STUDENTS to PNU_SUBJECT_OWNER;
+grant select, insert, update, delete on PNU.SUBJECT_STUDENTS_GROUP to PNU_SUBJECT_OWNER;
+grant select, insert, update, delete on PNU.SUBJECT_SUPERVISORS_DELETE to PNU_SUBJECT_OWNER;
+grant select, insert, update, delete on PNU.TEMP_SUBJECT_STUDENTS to PNU_SUBJECT_OWNER;
+grant select, insert, update, delete on PNU.TEMP_TERM_SUBJECTS to PNU_SUBJECT_OWNER;
+grant select, insert, update, delete on PNU.TERM_SUBJECTS to PNU_SUBJECT_OWNER;
+grant select, insert, update on SUPPORT.AUDIT_UPDATE_OPERATION to PNU_SUBJECT_OWNER;
+grant select, insert, update on SUPPORT.BIN$WMPMQJ1NS8QEGSD3JCMBHG==$0 to PNU_SUBJECT_OWNER;
+grant execute on SUPPORT.QUERY_SERVICES to PNU_SUBJECT_OWNER;
+grant select on SUPPORT.SQL_BOUND_VARS to PNU_SUBJECT_OWNER;
+grant select, insert on SUPPORT.SYS_PARAMS to PNU_SUBJECT_OWNER;
+grant select, insert, update, delete, alter on SUPPORT.TABLE_ATTACHEMAT to PNU_SUBJECT_OWNER;
+grant execute on SUPPORT.URLENCODE to PNU_SUBJECT_OWNER;

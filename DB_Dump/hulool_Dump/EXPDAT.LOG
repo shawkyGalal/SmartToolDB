@@ -1,0 +1,6 @@
+Job "SYSTEM"."HULOOL DAILY DUMP" stopped by user request at 11:27:28
+Starting "SYSTEM"."HULOOL DAILY DUMP":  
+Job HULOOL DAILY DUMP has been reopened at Monday, 11 December, 2017 11:27 
+Restarting "SYSTEM"."HULOOL DAILY DUMP":  
+Estimate in progress using BLOCKS method...
+Processing object type DATABASE_EXPORT/SCHEMA/TABLE/TABLE_DATA

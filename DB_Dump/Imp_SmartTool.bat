@@ -1,0 +1,1 @@
+IMP.EXE log=C:\DOCUME~1\admin\LOCALS~1\Temp\plsimp.log file=D:\SMARTV~1\Products\SMARTT~1\DB_Dump\SmartTool17-03-2009.dmp userid="sys/edis@EN_SUN as sysdba" buffer=30720 commit=yes full=yes grants=yes ignore=yes indexes=yes rows=yes show=no constraints=yes
